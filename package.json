@@ -1,1 +1,23 @@
-
+{
+  "name": "fitistic-mobile-bdd",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "appium": "appium",
+    "test": "wdio run ./wdio.conf.js",
+    "test:login": "wdio run ./wdio.conf.js --cucumberOpts.tagExpression @login",
+    "test:onboarding": "wdio run ./wdio.conf.js --cucumberOpts.tagExpression @onboarding",
+    "check": "node scripts/check.js"
+  },
+  "devDependencies": {
+    "@cucumber/gherkin": "^42.0.1",
+    "@cucumber/messages": "^34.2.1",
+    "@wdio/cli": "^9.0.0",
+    "@wdio/cucumber-framework": "^9.0.0",
+    "@wdio/globals": "^9.31.3",
+    "@wdio/local-runner": "^9.0.0",
+    "@wdio/spec-reporter": "^9.0.0",
+    "appium": "^3.8.0"
+  }
+}
